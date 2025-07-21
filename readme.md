@@ -106,7 +106,7 @@ Projeto desenvolvido para o desafio técnico "Fábrica de Tijolos", implementand
 - Testes unitários e de integração não foram incluídos devido ao escopo do desafio, mas podem ser adicionados para maior robustez.
 
 ## Endereço do Repositório
-- Repositório GitHub: https://github.com/pedo-marques/brick-factory
+- Repositório GitHub: [https://github.com/pedo-marques/brick-factory](https://github.com/pedrolucas167/Brick-Factory/)
 
 ## Contato
 - Desenvolvido por Pedro Marques
