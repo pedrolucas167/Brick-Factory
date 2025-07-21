@@ -90,7 +90,7 @@ Projeto desenvolvido para o desafio técnico "Fábrica de Tijolos", implementand
   - **Detalhes**: Exibe detalhes de um tijolo com ações para aprovar, reprovar ou deletar (se defeituoso).
   - **Relatório**: Exibe estatísticas (tijolos brancos/pretos com furos pares/ímpares, status e defeituosos) com gráfico de barras.
 
-  ##Telas criadas##
+  ## Telas criadas ##
 ![Listagem](image.png)
 ![Criar](image-1.png)
 ![Relatorio](image-3.png)
