@@ -6,10 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import jakarta.validation.Valid;
-import java.util.Map;
+import java.util.List;
 
 @RestController
 @RequestMapping("/bricks")
@@ -19,8 +18,8 @@ public class BrickController {
 
     @GetMapping
     public Page<Brick> listAll(
-            @RequestParam(defaultValue = "0") int page,
-            @RequestParam(defaultValue = "10") int size) {
+        @RequestParam(defaultValue = "0") int page,
+        @RequestParam(defaultValue = "10") int size) {
         Pageable pageable = PageRequest.of(page, size);
         return brickService.findAll(pageable);
     }
@@ -37,27 +36,16 @@ public class BrickController {
 
     @GetMapping("/{id}")
     public Brick findById(@PathVariable Long id) {
-        return brickService.findById(id)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Tijolo não encontrado"));
+        return brickService.findById(id);
     }
 
     @PutMapping("/{id}/status")
-    public Brick updateStatus(@PathVariable Long id, @RequestBody Map<String, String> statusMap) {
-        String newStatus = statusMap.get("status");
-        if (!("APROVADO".equals(newStatus) || "REPROVADO".equals(newStatus))) {
-            throw new IllegalArgumentException("Status inválido! Use APROVADO ou REPROVADO.");
-        }
+    public Brick updateStatus(@PathVariable Long id, @RequestBody String newStatus) {
         return brickService.updateStatus(id, newStatus);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> delete(@PathVariable Long id) {
-        Brick brick = brickService.findById(id)
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Tijolo não encontrado"));
-        if (!brick.isDefective()) {
-            throw new IllegalStateException("Somente tijolos defeituosos podem ser deletados!");
-        }
+    public void delete(@PathVariable Long id) {
         brickService.delete(id);
-        return ResponseEntity.noContent().build();
     }
 }
