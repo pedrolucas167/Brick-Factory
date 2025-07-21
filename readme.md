@@ -91,9 +91,9 @@ Projeto desenvolvido para o desafio técnico "Fábrica de Tijolos", implementand
   - **Relatório**: Exibe estatísticas (tijolos brancos/pretos com furos pares/ímpares, status e defeituosos) com gráfico de barras.
 
   ## Telas criadas ##
-![Listagem](image.png)
-![Criar](image-1.png)
-![Relatorio](image-3.png)
+<img width="1921" height="933" alt="Listagem" src="https://github.com/user-attachments/assets/dc78ec0d-f92b-4699-9f90-c2528d901134" />
+<img width="1921" height="933" alt="Criar" src="https://github.com/user-attachments/assets/04d81805-6083-4529-872d-f5b5a9fce708" />
+<img width="1921" height="933" alt="Relatorio" src="https://github.com/user-attachments/assets/eab1a941-7995-464f-b996-c6d8e9c840e8" />
 
 
 ## Observações e Limitações
