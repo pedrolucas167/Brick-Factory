@@ -93,7 +93,7 @@ Projeto desenvolvido para o desafio técnico "Fábrica de Tijolos", implementand
   ##Telas criadas##
 ![Listagem](image.png)
 ![Criar](image-1.png)
-![Relatorio](image-2.png)
+![Relatorio](image-3.png)
 
 
 ## Observações e Limitações
